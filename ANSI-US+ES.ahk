@@ -10,6 +10,10 @@ AppsKey & ?::
 send ¿
 return
 
+AppsKey & /::
+send ¿
+return
+
 AppsKey & a::
 If (( GetKeyState("CapsLock", "T") = 0 ) && ( GetKeyState("Shift", "P") = 0 ) || ( GetKeyState("CapsLock", "T") = 1 ) && ( GetKeyState("Shift", "P") = 1 ))
 send á
@@ -58,7 +62,7 @@ AppsKey::var := "´"
 {
 
 a::
-if ( (GetKeyState("CapsLock", "T") = 0) && ( GetKeyState("Shift", "P") = 0 ) )
+if ( (GetKeyState("CapsLock", "T") = 0))
 Send, á
 else
 Send, Á
@@ -104,6 +108,10 @@ Send, ¡
 return
 
 ?::
+Send, ¿
+return
+
+/::
 Send, ¿
 return
 
@@ -154,6 +162,10 @@ Send, ¡
 return
 
 +?::
+Send, ¿
+return
+
++/::
 Send, ¿
 return
 }
